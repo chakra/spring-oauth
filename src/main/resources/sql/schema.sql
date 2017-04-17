@@ -34,3 +34,19 @@ CREATE TABLE oauth_refresh_token (
   token BLOB,
   authentication BLOB
 );
+
+CREATE TABLE oauth_access_token (
+  token_id character(256) DEFAULT NULL,
+  token bytea,
+  authentication_id character(256) DEFAULT NULL,
+  user_name character(256) DEFAULT NULL,
+  client_id character(256) DEFAULT NULL,
+  authentication bytea,
+  refresh_token character(256) DEFAULT NULL
+);
+
+CREATE TABLE oauth_refresh_token (
+  token_id character(256) DEFAULT NULL,
+  token bytea,
+  authentication bytea
+);

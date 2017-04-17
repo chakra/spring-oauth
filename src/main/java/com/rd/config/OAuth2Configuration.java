@@ -60,7 +60,7 @@ public class OAuth2Configuration {
                     .authorizeRequests()
                     .antMatchers("/hello/").permitAll()
                     .antMatchers("/secure/**").authenticated()
-                    .antMatchers("https://guarded-island-27758.herokuapp.com/**").authenticated();
+                    .antMatchers("https://still-fortress-41429.herokuapp.com/**").authenticated();
         }
 
     }

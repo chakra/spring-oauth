@@ -58,9 +58,8 @@ public class OAuth2Configuration {
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                     .and()
                     .authorizeRequests()
-                    .antMatchers("/hello/").permitAll()
-                    .antMatchers("/secure/**").authenticated()
-                    .antMatchers("https://still-fortress-41429.herokuapp.com/**").authenticated();
+                    .antMatchers("/user/**").permitAll()
+                    .antMatchers("/secure/**").authenticated();
         }
 
     }
@@ -91,6 +90,7 @@ public class OAuth2Configuration {
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints)
                 throws Exception {
+
             endpoints
                     .tokenStore(tokenStore())
                     .authenticationManager(authenticationManager);

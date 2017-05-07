@@ -50,7 +50,7 @@ public class OAuth2Configuration {
                     .logoutSuccessHandler(customLogoutSuccessHandler)
                     .and()
                     .csrf()
-                    .requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/authorize"))
+                    .requireCsrfProtectionMatcher(new AntPathRequestMatcher("/api/oauth/token/**"))
                     .disable()
                     .headers()
                     .frameOptions().disable()

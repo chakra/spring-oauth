@@ -58,6 +58,8 @@ public class OAuth2Configuration {
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                     .and()
                     .authorizeRequests()
+                    .antMatchers("/login").permitAll()
+                    .antMatchers("/home").permitAll()
                     .antMatchers("/user/**").permitAll()
                     .antMatchers("/secure/**").authenticated();
         }

@@ -61,6 +61,7 @@ public class OAuth2Configuration {
                     .antMatchers("/login").permitAll()
                     .antMatchers("/home").permitAll()
                     .antMatchers("/user/**").permitAll()
+                    .antMatchers("/api/oauth/token/").permitAll()
                     .antMatchers("/secure/**").authenticated();
         }
 
